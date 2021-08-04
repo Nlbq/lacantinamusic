@@ -1,0 +1,15 @@
+.horizontal {
+    border: solid 4px #fff;
+    height: 206px;
+}
+.horizontal:hover{
+    cursor: pointer;
+        border: solid 4px #333;
+
+}
+.card-image{
+    justify-content: center;
+    display: flex;
+}
+
+

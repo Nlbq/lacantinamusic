@@ -1,0 +1,14 @@
+h1, p{
+    text-align: center;
+    font-size: 35px;
+}
+
+.contenu.dark {
+    color: #f1f1f1;
+    background: #333;
+}
+
+.contenu.light {
+    color: #333;
+    background: #f1f1f1;
+}
