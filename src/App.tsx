@@ -21,21 +21,21 @@ const App: FunctionComponent = () => {
       <div className="App">
       {/* La barre de navigation*/}
         <Navbar />
-        <ThemeContextProvider>
+        {/* <ThemeContextProvider>
           <BtnToggle />
-        </ThemeContextProvider>
+        </ThemeContextProvider> */}
       {/* Le système de gestion des routes de l'appli*/}
         <Switch>
           <ThemeContextProvider>
           <BtnToggle />
+      
           <Route exact path="/" component={Accueil} />
           <Route exact path="/Accueil" component={Accueil} />
+          
           <Route exact path="/projects" component={ProjectList} />
           <Route exact path="/projects/:id" component={ProjectsDetail} />         
         </ThemeContextProvider>
-        <Route component={PageNotFound} />
-          
-          
+          <Route component={PageNotFound} />
           
         </Switch>
       </div>

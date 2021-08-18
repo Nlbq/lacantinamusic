@@ -1,7 +1,9 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState, useEffect ,useContext } from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import Project from '../models/project';
 import PROJECTS from '../models/mock-project';
+import './project-detail.css';
+import { ThemeContext } from '../Context/ThemeContext';
 
 
   
@@ -10,6 +12,7 @@ type Params = { id: string };
 const ProjectsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match }) => {
     
   const [project, setProject] = useState<Project|null>(null);
+  const {theme} = useContext(ThemeContext);
   
   useEffect(() => {
     PROJECTS.forEach(project => {
@@ -20,7 +23,7 @@ const ProjectsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
   }, [match.params.id]);
     
   return (
-    <div>
+    <div className={theme ? 'contenu light' : 'contenu dark'}>
       { project ? (
         <div className="row">
           <div className="col s12 m8 offset-m2"> 

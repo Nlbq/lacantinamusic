@@ -1,9 +1,9 @@
-import React, { FunctionComponent, useState, useContext } from 'react';
+import React, { FunctionComponent, useContext } from 'react';
 import Project from '../models/project';
 import './project-card.css';
 // import formatDate from '../helpers/format-date';
 import { useHistory } from 'react-router-dom';
-import {ThemeContext} from '../Context/ThemeContext';
+// import {ThemeContext} from '../Context/ThemeContext';
 
   
 type Props = {
@@ -15,8 +15,6 @@ const ProjectCard: FunctionComponent<Props> = ({project}) => {
   ;
   // const [color, setColor] = useState<string>();
   const history = useHistory();
-  const {theme} = useContext(ThemeContext);
-  
   // const showBorder = () => {
   //     setColor(borderColor);
   // }  
